@@ -215,7 +215,6 @@ ul>li:hover>a, ul>li:focus>a, ul>li:active>a, ul>li.active>a {
 											<table class="table table-striped table-hover" style="table-layout: fixed">
 												<thead>
 													<tr>
-														<th>test</th>
 														<th>번호</th>
 														<th>제목</th>
 														<th>내용</th>
@@ -228,7 +227,6 @@ ul>li:hover>a, ul>li:focus>a, ul>li:active>a, ul>li.active>a {
 													<c:forEach var="boardList" items="${boardList }" varStatus="status">
 														<tr>
 															<td><c:out value="${boardList.row_number}"></c:out></td>
-															<td><c:out value="${boardList.board_number }"/></td>
 															<td style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap;"><a href="${pageContext.request.contextPath }/boardDetail.do?groupList_number=${groupDetail.grouplist_number}&board_number=${boardList.board_number }"><c:out value="${boardList.board_title }"/></a></td>
 															<td style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap;"><c:out value="${boardList.board_content }"/></td>
 															<td><c:out value="${boardList.board_writer }"/></td>
