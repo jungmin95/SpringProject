@@ -1,5 +1,6 @@
 package com.bu.bumoim.dao.logic;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +18,6 @@ public class UserDaoLogic implements UserDao {
 	@Autowired
 	private SqlSession sqlSession;
 
-	@Override
 	public int login_action(Map<String, Object> requestMap) {
 		//
 		return sqlSession.selectOne("login.loginActionCount", requestMap);
@@ -49,4 +49,5 @@ public class UserDaoLogic implements UserDao {
 		List<Member> member = sqlSession.selectList("getMemberList", member_id);
 		return member;
 	}
+	
 }

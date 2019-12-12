@@ -15,6 +15,7 @@ public class UserServiceLogic implements UserService{
 	//
 	@Autowired
 	private UserDao userDao;
+
 	
 	@Override
 	public int login_action(Map<String, Object> requestMap) {
@@ -48,4 +49,5 @@ public class UserServiceLogic implements UserService{
 		List<Member> member = userDao.getMemberList(member_id);
 		return member;
 	}
+	
 }

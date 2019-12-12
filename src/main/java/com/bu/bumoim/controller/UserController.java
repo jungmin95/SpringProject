@@ -10,6 +10,7 @@ import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
@@ -58,11 +59,6 @@ public class UserController {
 			logger.info("�븘�씠�뵒 �궗�슜媛��뒫");
 			return 1;
 		}
-	}
-	
-	@RequestMapping(value="/findid.do")
-	public String findid() {
-		return "user/findid";
 	}
 	@RequestMapping(value="/join.do", method=RequestMethod.POST)
 	public String join(Member member,HttpServletRequest req, Model model) {

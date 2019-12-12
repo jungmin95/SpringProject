@@ -1,5 +1,6 @@
 package com.bu.bumoim.dao;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,4 +18,5 @@ public interface UserDao {
 	public int deleteMember(String member_id);
 
 	public List<Member> getMemberList(String member_id);
+	
 }

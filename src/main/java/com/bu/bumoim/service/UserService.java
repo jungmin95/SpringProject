@@ -16,4 +16,5 @@ public interface UserService {
 	public int deleteMember(String member_id);
 	
 	public List<Member> getMemberList(String member_id);
+	
 }

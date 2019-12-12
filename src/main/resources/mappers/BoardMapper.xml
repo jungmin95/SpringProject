@@ -40,7 +40,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!--     </select> -->
 	<select id="selectGroupBoardList" resultType="HashMap">
 		SELECT A.*
-		, @rownum := @rownum+1 as row_number
+		, floor(@rownum := @rownum+1) as row_number
 		FROM (
 			SELECT
 				board_number,
@@ -52,7 +52,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				board_count
 			FROM
 				bumoim.groupboard
-			JOIN (SELECT @rownum := 0) AS R
+			JOIN (SELECT floor(@rownum := 0)) AS R
 			WHERE 1=1
 			AND grouplist_number = #{groupNum}
 			ORDER BY board_number DESC

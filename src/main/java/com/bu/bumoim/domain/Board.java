@@ -26,14 +26,13 @@ public class Board {
 		this.board_date = board_date;
 		this.board_writer = board_writer;
 	}
-	public Board(String board_photo, String board_title, String board_content, Date board_date, String board_writer, int board_number, int row_number) {
+	public Board(String board_photo, String board_title, String board_content, Date board_date, String board_writer, int board_number) {
 		this.board_photo = board_photo;
 		this.board_title = board_title;
 		this.board_content = board_content;
 		this.board_date = board_date;
 		this.board_writer = board_writer;
 		this.board_number = board_number;
-		this.setRow_number(row_number);
 	}
 	
 	public int getboard_number() {
@@ -105,6 +104,12 @@ public class Board {
 	public void setRow_number(int row_number) {
 		this.row_number = row_number;
 	}
+
+
+
+
+
+
 
 
 

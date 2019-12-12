@@ -226,7 +226,7 @@ ul>li:hover>a, ul>li:focus>a, ul>li:active>a, ul>li.active>a {
 											<tbody>
 													<c:forEach var="boardList" items="${boardList }" varStatus="status">
 														<tr>
-														<!-- 테스트 -->
+														<!-- 테스ㅋ트 -->
 															<td><c:out value="${boardList.row_number}"></c:out></td>
 															<td style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap;"><a href="${pageContext.request.contextPath }/boardDetail.do?groupList_number=${groupDetail.grouplist_number}&board_number=${boardList.board_number }"><c:out value="${boardList.board_title }"/></a></td>
 															<td style="text-overflow:ellipsis; overflow:hidden; white-space:nowrap;"><c:out value="${boardList.board_content }"/></td>

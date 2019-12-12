@@ -86,4 +86,10 @@
 		from member
 		where member_id = #{member_id}
 	</select>
+	
+	<select id="selectFindId" resultType="hashmap" parameterType="hashmap">
+		SELECT member_id
+		FROM member
+		WHERE member_mail = #{member_email}
+	</select>
 </mapper>
